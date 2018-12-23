@@ -1,0 +1,62 @@
+* aws_security_group.sec-group-lg: 1 error(s) occurred:
+
+* aws_security_group.sec-group-lg: Error authorizing security group ingress rules: InvalidParameterValue: Invalid value 'http' for IP protocol. Unknown protocol.
+	status code: 400, request id: 97c34869-d605-4096-8f9e-49955add40ca
+* aws_alb_target_group.alb-target-group: 1 error(s) occurred:
+
+* aws_alb_target_group.alb-target-group: Error creating LB Target Group: ValidationError: 2 validation errors detected: Value 'http' at 'healthCheckProtocol' failed to satisfy constraint: Member must satisfy enum value set: [TCP, HTTP, HTTPS]; Value 'http' at 'protocol' failed to satisfy constraint: Member must satisfy enum value set: [TCP, HTTP, HTTPS]
+	status code: 400, request id: ece37f59-0dd4-11e8-822d-2f23b6618c9a
+* aws_security_group.sec-group-elb-asg: 1 error(s) occurred:
+
+* aws_security_group.sec-group-elb-asg: Error authorizing security group ingress rules: InvalidParameterValue: Invalid value 'http' for IP protocol. Unknown protocol.
+	status code: 400, request id: 670807a6-b35d-4035-97d1-8ad87a4cec6f
+
+
+---------------------
+3 error(s) occurred:
+
+* aws_alb_target_group.alb-target-group: 1 error(s) occurred:
+
+* aws_alb_target_group.alb-target-group: Error creating LB Target Group: ValidationError: 2 validation errors detected: Value 'tcp' at 'healthCheckProtocol' failed to satisfy constraint: Member must satisfy enum value set: [TCP, HTTP, HTTPS]; Value 'tcp' at 'protocol' failed to satisfy constraint: Member must satisfy enum value set: [TCP, HTTP, HTTPS]
+	status code: 400, request id: eb1ef61c-0dd5-11e8-8dba-2f7c354960ba
+* aws_alb.app-load-balancer: 1 error(s) occurred:
+
+* aws_alb.app-load-balancer: Error creating Application Load Balancer: ValidationError: At least two subnets in two different Availability Zones must be specified
+	status code: 400, request id: 1c1c5028-0dd6-11e8-903f-bf054021ca1b
+* aws_autoscaling_group.autoscaling-group: 1 error(s) occurred:
+
+* aws_autoscaling_group.autoscaling-group: Error creating AutoScaling Group: ValidationError: The availability zone [us-east-1] is not legal
+	status code: 400, request id: 2e8e72f5-0dd6-11e8-9677-c7fd52f8d578
+
+
+-------------------------------
+
+* aws_autoscaling_policy.scale-out-policy: Error putting scaling policy: ValidationError: There must be a StepAdjustment with an unspecified upper bound (i.e., upper bound is null) when one StepAdjustment has a positive upper bound.
+	status code: 400, request id: 5881247f-0dda-11e8-b227-a3069029bffe
+* aws_autoscaling_policy.scale-in-policy: 1 error(s) occurred:
+
+* aws_autoscaling_policy.scale-in-policy: Error putting scaling policy: ValidationError: There must be a StepAdjustment with an unspecified lower bound (i.e., lower bound is null) when one StepAdjustment has a negative lower bound.
+	status code: 400, request id: 5880af13-0dda-11e8-8d5e-73735750757c
+* aws_alb.app-load-balancer: 1 error(s) occurred:
+
+* aws_alb.app-load-balancer: Error creating Application Load Balancer: ValidationError: Security group 'sec-group-elb-asg' is not valid
+	status code: 400, request id: 1690f37a-0dda-11e8-822d-2f23b6618c9a
+
+-------------------------------
+
+1 error(s) occurred:
+
+* aws_instance.load-generator: 1 error(s) occurred:
+
+* aws_instance.load-generator: Error launching instance, possible mismatch of Security Group IDs and Names. See AWS Instance docs here: https://terraform.io/docs/providers/aws/r/instance.html.
+
+	AWS Error: Value () for parameter groupId is invalid. The value cannot be empty
+
+* aws_alb.app-load-balancer: Error creating Application Load Balancer: ValidationError: Security group 'sec-group-alb-asg' is not valid
+	status code: 400, request id: 49c77b60-0de2-11e8-8adb-d3476d369134
+
+
+>>> p = subprocess.Popen("pwd", stdout=subprocess.PIPE)
+>>> p
+<subprocess.Popen object at 0x10ea3efd0>
+>>> p.communicate()[0]

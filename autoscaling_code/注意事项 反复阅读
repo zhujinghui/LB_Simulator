@@ -1,0 +1,68 @@
+'''
+要求
+1. launch one Load Generator instance
+2. create correct Security Groups, launch an Elastic Load Balancer and initiate an Auto Scaling Group along with Launch Configuration,
+Auto Scale Policies and CloudWatch Alarms.
+3.  warm up the ELB (1 or more times) before starting the system architect test. Your program should also record the testId in the response.
+4. to complete, terminate all resources (Security Group for ELB and ASG, Elastic Load Balancer, Auto Scaling Group, Launch Configuration, Auto Scale Polices, CloudWatch Alarms)
+except the Load Generator and its attached security group.
+5. answer question
+6. Terminate LG after all finish!!!!
+http://[load-generator-dns]/upload
+
+48mins a full test
+
+CloudWatch provides very interesting metrics
+
+Scaling out quickly is tricky. Find a way to mitigate the impact of adding new instances.
+
+The rules to scale out and scale in are important, as well as configuration of timeouts (cooldown, draining, healthchecks, etc)
+
+same availability zone would potentially lead to better results.
+
+If your RPS is nearly zero (0 <= rps <= 1), please check if there is at least one healthy instance connected to the ELB.
+Notice that your solution should be tolerant to instance failures
+
+ check your health check configuration, timeouts, etc.
+
+ Be sure to delete Auto Scaling groups before terminating the instances created by Auto Scaling. Terminating instances
+ first may result in Auto Scaling trying to boot more instances.
+
+  You need to tag the Load Balancer, Autoscaling Group, and Instances.
+  ！！！！删除顺序
+  Auto Scaling Group, Load Generator, Load Balancer, Launch Configuration, Security Group
+  ！！！！创建顺序
+  ELB --> Auto Scaling --> CloudWatch
+'''
+
+#1. launch load generator
+
+#2. launch web service
+
+#3. authenticate lg submit
+#http: //[load-generator-dns]/password?passwd=[your submission password]&andrewid=[your andrew id]
+
+
+#4. submit the web service VM's DNS name to the load generator to start the test:
+# http://[load-generator-dns]/test/horizontal?dns=[web-service-instance-dns]
+
+
+#5.monitor the test from the log URL and
+# fetch the total RPS of the web service instance(s):
+# http://[load-generator-dns]/log?name=test.[test-number].log
+
+#6. launch more web service instances
+#new instances can be added to a running test by sending request to the load generator:
+#http://[load-generator-dns]/test/horizontal/add?dns=[web-service-instance-dns]
+
+
+#7. Submit your program as <testId>.zip including all your source code
+#http://[load-generator-dns]/upload
+
+
+#rules:
+#1. a maximum of 30 minutes to reach your target RPS of 60.
+#2. web service instances (except for the first one) should be launched after the test starts.
+#3. Do not hardcode the number of instances into the code.
+#4. Do not hardcode a fixed delay between operations.
+#5. wait at least 100 seconds before it launches another one

@@ -16,7 +16,7 @@ while True:
     urls = [
                "http://127.0.0.1:5000/",
                "http://127.0.0.1:5001/"
-           ] * 20
+           ] * 1000
 
     rs = (grequests.head(u) for u in urls)
     print(grequests.map(rs))

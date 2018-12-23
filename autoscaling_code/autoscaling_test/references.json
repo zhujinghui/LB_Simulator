@@ -1,0 +1,81 @@
+{  
+    "referenceGuide" : "Cite all the reference sources in the required format. Proper citations will help you avoid unnecessary trouble. Read JSON grammar from Internet if needed.",
+
+
+
+    "websites":[
+        {  
+            "title":"Simple and Step Scaling Policies",
+            "url":"https://docs.aws.amazon.com/zh_cn/autoscaling/ec2/userguide/as-scaling-simple-step.html",
+            "code":"step_adjustment in terraform",
+            "description":"<additional information you find it necessary to provide>"
+        },
+
+        {
+            "title":"Terraform",
+            "url":"https://www.terraform.io/",
+            "code":"terraform command line and configuration",
+            "description":"<additional information you find it necessary to provide>"
+        },
+
+        {
+            "title":"Dynamic Scaling",
+            "url":"https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html",
+            "code":"Step scaling",
+            "description":"<additional information you find it necessary to provide>"
+        },
+
+
+        {
+            "title":"running command from python",
+            "url":"https://stackoverflow.com/questions/4760215/running-shell-command-from-python-and-capturing-the-output",
+            "code":"subprocess",
+            "description":"<additional information you find it necessary to provide>"
+        },
+
+        {
+            "title":"zip files python",
+            "url":"https://stackoverflow.com/questions/1855095/how-to-create-a-zip-archive-of-a-directory",
+            "code":"zipfile()",
+            "description":"<additional information you find it necessary to provide>"
+        },
+        {
+            "title":"python requests lib",
+            "url":"http://docs.python-requests.org/en/master/user/quickstart/",
+            "code":"requests.get()",
+            "description":"<additional information you find it necessary to provide>"
+        },
+        {
+            "title":"aws-asg/main.tf",
+            "url":"https://github.com/koding/terraform/blob/master/examples/aws-asg/main.tf",
+            "code":"aws_autoscaling_group,aws_launch_configuration",
+            "description":"<additional information you find it necessary to provide>"
+        },
+        {
+            "title":"<title of the page>",
+            "url":"<url>",
+            "code":"<in which code you use the snippet or the idea>",
+            "description":"<additional information you find it necessary to provide>"
+        },
+        {
+            "title":"<title of the page>",
+            "url":"<url>",
+            "code":"<in which code you use the snippet or the idea>",
+            "description":"<additional information you find it necessary to provide>"
+        },
+        {
+            "title":"<title of the page>",
+            "url":"<url>",
+            "code":"<in which code you use the snippet or the idea>",
+            "description":"<additional information you find it necessary to provide>"
+        }
+
+    ],
+    "collaborators":[  
+        {  
+            "andrewId":"<collaborator andrewId>",
+            "collaborationType":"<I helped X, X helped me, or we helped each other>",
+            "description":"<describe the idea you shared>"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{  
+    "referenceGuide" : "Cite all the reference sources in the required format. Proper citations will help you avoid unnecessary trouble. Read JSON grammar from Internet if needed.",
+
+    "websites":[
+        {  
+            "title":"Retrieving public dns of EC2 instance with BOTO3",
+            "url":"https://stackoverflow.com/questions/34728477/retrieving-public-dns-of-ec2-instance-with-boto3",
+            "code":"new_instance[0].public_dns_name",
+            "description":"<additional information you find it necessary to provide>"
+        },
+          {
+            "title":"EC2 instance with BOTO3",
+            "url":"http://boto3.readthedocs.io/en/latest/guide/ec2-example-security-group.html",
+            "code":"new_instance[0].public_dns_name",
+            "description":"<additional information you find it necessary to provide>"
+        },
+          {
+            "title":".find()",
+            "url":"https://stackoverflow.com/questions/2416823/how-to-get-the-content-of-a-html-page-in-python",
+              "code":".find()",
+            "description":"<additional information you find it necessary to provide>"
+        },
+          {
+            "title":"python requests",
+            "url":"http://docs.python-requests.org/zh_CN/latest/user/quickstart.html",
+            "code":"requests.get()",
+            "description":"<additional information you find it necessary to provide>"
+        }
+
+    ],
+    "collaborators":[  
+        {  
+            "andrewId":"<collaborator andrewId>",
+            "collaborationType":"<I helped X, X helped me, or we helped each other>",
+            "description":"<describe the idea you shared>"
+        }
+    ]
+}

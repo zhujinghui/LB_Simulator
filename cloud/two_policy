@@ -116,3 +116,7 @@ while our step scaling policy only desire 1 replica.
 In conclusion, if we want achieve high resource utilization and at the same time want to scale fast, 
 the proposed "threshold based step scaling policy" performs better than the current "target tracking 
 scaling policy"
+
+What is new???
+Problem	
+Idea

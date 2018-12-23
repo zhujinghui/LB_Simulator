@@ -1,0 +1,2 @@
+p = subprocess.Popen("pwd", stdout=subprocess.PIPE)
+p.communicate()[0].decode("utf-8")
